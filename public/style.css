@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black; /* Background for visibility */
+    color: white; /* White text */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.square {
+    width: 400px;
+    padding: 20px;
+    border: 2px solid white;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.code-input-square input,
+.code-input-square button,
+.announcement-square textarea,
+.announcement-square button {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+}
+
+.code-input-square button {
+    background-color: #007bff;
+    border: none;
+    cursor: pointer;
+}
+
+.code-input-square button:hover {
+    background-color: #0056b3;
+}
+
+.announcement-square button {
+    background-color: #28a745;
+    border: none;
+    cursor: pointer;
+}
+
+.announcement-square button:hover {
+    background-color: #218838;
+}
+
+.hidden {
+    display: none;
+}
+
+#currentAnnouncementMessage {
+    word-wrap: break-word;
+}
