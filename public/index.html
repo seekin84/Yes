@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcement Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Top Square: Code Input -->
+        <div class="square code-input-square">
+            <h2>Enter Code</h2>
+            <input type="password" id="secretCode" placeholder="Type your secret code here">
+            <button id="submitCode">Go</button>
+            <p id="codeMessage" class="hidden"></p>
+        </div>
+
+        <!-- Bottom Square: Announcement Display / Input -->
+        <div class="square announcement-square">
+            <div id="announcementPost" class="hidden">
+                <h2>Post Announcement</h2>
+                <textarea id="announcementText" placeholder="Type your announcement here"></textarea>
+                <button id="postAnnouncement">Post</button>
+                <p id="postMessage" class="hidden"></p>
+            </div>
+            <div id="announcementDisplay">
+                <h2>Current Announcement</h2>
+                <p id="currentAnnouncementMessage"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-functions.js"></script>
+
+    <script>
+        // REPLACE with your Firebase config
+        const firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+            projectId: "YOUR_PROJECT_ID",
+            storageBucket: "YOUR_PROJECT_ID.appspot.com",
+            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+            appId: "YOUR_APP_ID"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
